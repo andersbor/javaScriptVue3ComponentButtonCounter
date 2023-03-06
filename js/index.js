@@ -1,9 +1,9 @@
-Vue.createApp({
+//import hellocomponent from './hellocomponent.vue'
+
+const app = Vue.createApp({
     data() {
         return {
-            name: "Anders",
-            currentCount: 0
+            name: "Anders"
         }
     }
 }).mount("#app")
-

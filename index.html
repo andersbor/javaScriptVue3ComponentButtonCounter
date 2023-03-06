@@ -13,15 +13,28 @@
     <h1>Vue component examples</h1>
     <div id="app">
         {{name}}
-        {{currentCount}}
     </div>
 
     <div id="components-demo">
-        <button-counter title="Anders" more="B"></button-counter> <br>
-        <button-counter title="Yet another" more="Button"></button-counter>
+        <div>
+            <hello name="Jens"></hello>
+        </div>
+        <button-counter from="7"></button-counter> <br>
+        <button-counter></button-counter>
+        <div>
+            <say-hello></say-hello>
+        </div>
+        <button-counter></button-counter>
+
+        <h2>calculator</h2>
+        <calculator></calculator>
+        <collect-words></collect-words>
     </div>
+
+    <a href="anotherpage.html">Another page</a>
+
     <script src="js/index.js"></script>
-    <script src="js/buttoncounter.js"></script>
+    <script src="js/componentExamples.js"></script>
 </body>
 
 </html>
