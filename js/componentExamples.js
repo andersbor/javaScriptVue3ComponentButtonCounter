@@ -40,8 +40,7 @@ appComp.component('say-hello', {
       say hello   
     <input type="text" v-model="name">
        <button v-on:click="sayHello()">Say hello</button>
-       <div>{{message}}</div>
-    `
+       <div>{{message}}</div>`
 })
 
 appComp.component('calculator', {
@@ -78,10 +77,16 @@ appComp.component('collect-words', {
             this.words.push(this.word)
         },
         clear() {
-            this.words.clear()
+            this.words = []
+            this.message = null
         },
         show() {
-            this.message = this.words.toString()
+            if (this.words.length > 0) {
+                this.message = this.words.toString()
+            }
+            else {
+                this.message = "empty"
+            }
         }
     },
     template: `
@@ -91,6 +96,5 @@ appComp.component('collect-words', {
     <button v-on:click="show()">Show</button>
     <div>{{message}}</div>`
 })
-
 
 appComp.mount("#components-demo")
